@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Private Search</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="brand">
+            🔎 Private Search
+        </div>
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            title="Toggle dark mode"
+        >
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>
+                Search privately.
+            </h1>
+
+            <p>
+                Search your own indexed web.
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search the private index..."
+                    autocomplete="off"
+                    autofocus
+                >
+
+
+                <button
+                    id="clearButton"
+                    class="clear-button hidden"
+                    title="Clear search"
+                >
+                    ✕
+                </button>
+
+
+                <button
+                    id="searchButton"
+                    class="search-button"
+                    title="Search"
+                >
+                    🔍
+                </button>
+
+            </div>
+
+
+            <div class="shortcut">
+
+                Press
+                <kbd>Enter</kbd>
+                to search
+
+            </div>
+
+        </section>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="status"
+            class="status"
+        ></div>
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loading"
+            class="loading hidden"
+        >
+
+            <div class="spinner"></div>
+
+            <span>
+                Searching...
+            </span>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <section
+            id="results"
+            class="results"
+        ></section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <span>
+            Private Search Engine
+        </span>
+
+        <span>
+            Running locally on your machine
+        </span>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies and build output
+node_modules/
+dist/
+
+# Local databases (may contain private data)
+data/*.db
+data/*.sqlite
+data/*.sqlite3

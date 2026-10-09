@@ -1,0 +1,632 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --background: #f7f8fa;
+
+    --surface: #ffffff;
+
+    --text: #171717;
+
+    --secondary: #6b7280;
+
+    --border: #e5e7eb;
+
+    --accent: #111827;
+
+    --result-url: #15803d;
+
+    --mark: #fef08a;
+
+    --shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark {
+
+    --background: #111827;
+
+    --surface: #1f2937;
+
+    --text: #f9fafb;
+
+    --secondary: #9ca3af;
+
+    --border: #374151;
+
+    --accent: #f9fafb;
+
+    --result-url: #4ade80;
+
+    --mark: #854d0e;
+
+    --shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+
+    height: 64px;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.brand {
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.theme-button {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: var(--surface);
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+.theme-button:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    flex: 1;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    padding-top: 75px;
+
+    text-align: center;
+}
+
+
+.hero h1 {
+
+    margin: 0;
+
+    font-size: 48px;
+
+    letter-spacing: -1.5px;
+}
+
+
+.hero p {
+
+    margin-top: 10px;
+
+    color: var(--secondary);
+
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   SEARCH BOX
+========================================== */
+
+.search-box {
+
+    margin-top: 35px;
+
+    width: 100%;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 32px;
+
+    padding: 5px 7px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.search-box:focus-within {
+
+    border-color: #9ca3af;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 18px;
+
+    padding: 0 18px;
+}
+
+
+.search-box input::placeholder {
+
+    color: var(--secondary);
+}
+
+
+/* ==========================================
+   SEARCH BUTTON
+========================================== */
+
+.search-button {
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    color: var(--background);
+
+    cursor: pointer;
+
+    font-size: 19px;
+
+    transition:
+        transform 0.15s ease;
+}
+
+
+.search-button:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   CLEAR BUTTON
+========================================== */
+
+.clear-button {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--secondary);
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.clear-button:hover {
+
+    background: var(--border);
+}
+
+
+/* ==========================================
+   KEYBOARD SHORTCUT
+========================================== */
+
+.shortcut {
+
+    margin-top: 12px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+}
+
+
+kbd {
+
+    padding:
+        3px 7px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 5px;
+
+    background: var(--surface);
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status {
+
+    margin-top: 35px;
+
+    color: var(--secondary);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESULTS
+========================================== */
+
+.results {
+
+    margin-top: 15px;
+
+    padding-bottom: 50px;
+}
+
+
+.result {
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.03);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.result:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.result-title {
+
+    margin: 0 0 7px 0;
+
+    font-size: 21px;
+}
+
+
+.result-title a {
+
+    color: var(--text);
+
+    text-decoration: none;
+}
+
+
+.result-title a:hover {
+
+    text-decoration: underline;
+}
+
+
+.result-url {
+
+    color: var(--result-url);
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+
+    word-break: break-all;
+}
+
+
+.result-snippet {
+
+    margin: 0;
+
+    color: var(--secondary);
+
+    line-height: 1.65;
+
+    font-size: 15px;
+}
+
+
+/* SEARCH HIGHLIGHT */
+
+mark {
+
+    background: var(--mark);
+
+    color: inherit;
+
+    padding:
+        2px 4px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.loading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    color: var(--secondary);
+}
+
+
+.spinner {
+
+    width: 20px;
+
+    height: 20px;
+
+    border:
+        3px solid var(--border);
+
+    border-top-color: var(--text);
+
+    border-radius: 50%;
+
+    animation:
+        spin 0.8s linear infinite;
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.empty {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: var(--secondary);
+}
+
+
+.empty-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+
+    padding: 20px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--secondary);
+
+    font-size: 12px;
+
+    border-top:
+        1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+/* ==========================================
+   UTILITY
+========================================== */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding: 0 15px;
+
+    }
+
+
+    .container {
+
+        width: 92%;
+
+    }
+
+
+    .hero {
+
+        padding-top: 50px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .search-box {
+
+        height: 56px;
+
+    }
+
+
+    .search-button {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+
+    .footer {
+
+        flex-direction: column;
+
+        gap: 6px;
+
+    }
+
+}
